@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require('cors');
 var connectdb = require('./config/db');
 const dotenv = require("dotenv");
+const { unknownEndpoints, errorHandler } = require('./middleware/error');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +24,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use(unknownEndpoints);
+app.use(errorHandler);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -32,6 +36,11 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+process.on("unhandledRejection", (err, promise) => {
+  console.log(`Error: ${err.message}`.red.bold);
+  //close the server
+  server.close(() => process.exit(1));
+});
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
