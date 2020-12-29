@@ -6,13 +6,15 @@ var logger = require('morgan');
 var cors = require('cors');
 var connectdb = require('./config/db');
 const dotenv = require("dotenv");
-const { unknownEndpoints, errorHandler } = require('./middleware/error');
+const { errorHandler } = require('./middleware/error');
+const fileUpload = require("express-fileupload");
 
 var usersRouter = require('./routes/user.route');
 var authRouter = require('./routes/auth.route');
 var productRouter = require('./routes/product.route');
 var reviewRouter = require('./routes/review.route');
 var categoryRouter = require('./routes/category.route');
+var orderRouter = require('./routes/order.routes');
 
 var app = express();
 
@@ -28,6 +30,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(unknownEndpoints);
+app.use(
+  fileUpload({
+    useTempFiles: true,
+  })
+);
 app.use(errorHandler);
 
 
@@ -36,6 +43,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/product',productRouter);
 app.use('/api/review',reviewRouter);
 app.use('/api/category',categoryRouter);
+app.use('/api/order',orderRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
