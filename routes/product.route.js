@@ -14,7 +14,7 @@ const {
   const Product = require("../model/product");
   
   //Include other resource Router
- // const reviewRouter = require("./review");
+  const reviewRouter = require("./review.route");
   
   const router = require("express").Router();
   
@@ -25,7 +25,7 @@ const {
   
     router.post('/', createProduct);
   
- // router.use("/:productId/reviews", reviewRouter);
+  router.use("/:productId/reviews", reviewRouter);
   
   router
     .route("/:productId")

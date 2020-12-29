@@ -8,10 +8,10 @@ var connectdb = require('./config/db');
 const dotenv = require("dotenv");
 const { unknownEndpoints, errorHandler } = require('./middleware/error');
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/user.route');
 var authRouter = require('./routes/auth.route');
 var productRouter = require('./routes/product.route');
+var reviewRouter = require('./routes/review.route');
 
 var app = express();
 
@@ -30,10 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(errorHandler);
 
 
-app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/product',productRouter);
+app.use('/api/review',reviewRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
