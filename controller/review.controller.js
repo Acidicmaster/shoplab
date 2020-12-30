@@ -2,7 +2,6 @@ const asyncHandler = require("../middleware/async");
 const createError = require("../utility/createError");
 const Review = require("../model/review");
 const Product = require("../model/product");
-
 const getReviews = asyncHandler(async (req, res, next) => {
   if (req.params.productId) {
     const findProduct = await Product.findById(req.params.productId);

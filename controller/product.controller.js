@@ -3,11 +3,16 @@ const createError = require("../utility/createError");
 const path = require("path");
 const Product = require("../model/product");
 const cloudinary = require("cloudinary").v2;
+const dotenv = require("dotenv");
+
+//
+dotenv.config()
+
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
+  cloud_name:process.env.cloud_name,
+  api_key: process.env.api_key,
+  api_secret: process.env.api_secret,
 });
 
 const getProducts = asyncHandler(async (req, res, next) => {
@@ -46,12 +51,13 @@ const getProduct = asyncHandler(async (req, res, next) => {
 });
 
 const createProduct = asyncHandler(async (req, res, next) => {
+  
   if (!req.files) throw createError(400, "Please add a photo");
 
-  console.log(req.files);
+  //console.log(req, "line 52");
 
   const file = req.files.productImage;
-
+console.log(`Testing file ${JSON.stringify(file)}`)
   //Check file type
   if (!file.mimetype.startsWith("image"))
     throw createError(400, "This file is not supported");

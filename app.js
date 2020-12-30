@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 });
 
 process.on("unhandledRejection", (err, promise) => {
-  console.log(`Error: ${err.message}`.red.bold);
+  console.log(`Error: ${err.message}`);
   //close the server
   server.close(() => process.exit(1));
 });
