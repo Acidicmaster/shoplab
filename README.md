@@ -2,14 +2,15 @@
  A Nodejs e-commerce application
 
 Main endpoints
-  * User endpoints 
+ # H1 * User endpoints 
      -data --> 
      - name - type string
      - email - type string
      - password - type string
     + >kenneth-uche-shop.herokuapp.com/api/user --> get all users & create user
     + >kenneth-uche-shop.herokuapp.com/api/user/:id --> get user , update user & delete user
-  * authentication endpoints
+    ___
+# H1  * authentication endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/register --> register user
  + >kenneth-uche-shop.herokuapp.com/api/auth/login --> login user
  + >kenneth-uche-shop.herokuapp.com/api/auth/update/userdetail --> update user
@@ -17,9 +18,9 @@ Main endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/forgotpassword --> forgot password
  + >kenneth-uche-shop.herokuapp.com/api/auth/resetPassword --> reset password
  + >kenneth-uche-shop.herokuapp.com/api/auth/verifyemail --> verify email
-  
+  ___
  
-  * products endpoints
+ # H1 * products endpoints
       -data --> 
       - name - type string
       - productImage - type file
@@ -32,16 +33,19 @@ Main endpoints
      + >kenneth-uche-shop.herokuapp.com/api/product --> get all products & create products
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId --> get  product , update product & delete product
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId/reviews --> get product reveiw
-  * category endpoints
+     ___
+ # H1 * category endpoints
    -data --> 
      - categoryName - type string
          +  >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
-         + >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete category
-  * order endpoints
+         + >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
+         ___
+# H1  * order endpoints
    -data --> 
      - categoryName - type string
   * review endpoints
-Tech features
+  ___
+# H1 *Tech features*
 * Mongo DB
 * Node Js
 ## H2 API features
