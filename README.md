@@ -49,6 +49,6 @@ Main endpoints
 * Mongo DB
 * Node Js
 ---
-##  API features
+##  *API features*
 ####  cloudinary
     
