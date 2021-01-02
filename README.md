@@ -37,13 +37,13 @@ Main endpoints
  #  * category endpoints
    -data --> 
      - categoryName - type string
-         +  >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
+         + >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
          + >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
          ___
-#   * order endpoints
-   -data --> 
-     - categoryName - type string
-  * review endpoints
+#   * Order endpoints
+   ___
+     
+# * Review endpoints
   ___
 #  *Tech features*
 * Mongo DB
