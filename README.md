@@ -2,7 +2,7 @@
  A Nodejs e-commerce application
 
 Main endpoints
- # H1 * User endpoints 
+ #  * User endpoints 
      -data --> 
      - name - type string
      - email - type string
@@ -10,7 +10,7 @@ Main endpoints
     + >kenneth-uche-shop.herokuapp.com/api/user --> get all users & create user
     + >kenneth-uche-shop.herokuapp.com/api/user/:id --> get user , update user & delete user
     ___
-# H1  * authentication endpoints
+#   * authentication endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/register --> register user
  + >kenneth-uche-shop.herokuapp.com/api/auth/login --> login user
  + >kenneth-uche-shop.herokuapp.com/api/auth/update/userdetail --> update user
@@ -20,7 +20,7 @@ Main endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/verifyemail --> verify email
   ___
  
- # H1 * products endpoints
+ #  * products endpoints
       -data --> 
       - name - type string
       - productImage - type file
@@ -34,20 +34,21 @@ Main endpoints
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId --> get  product , update product & delete product
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId/reviews --> get product reveiw
      ___
- # H1 * category endpoints
+ #  * category endpoints
    -data --> 
      - categoryName - type string
          +  >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
          + >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
          ___
-# H1  * order endpoints
+#   * order endpoints
    -data --> 
      - categoryName - type string
   * review endpoints
   ___
-# H1 *Tech features*
+#  *Tech features*
 * Mongo DB
 * Node Js
-## H2 API features
-#### H4 cloudinary
+---
+##  API features
+####  cloudinary
     
