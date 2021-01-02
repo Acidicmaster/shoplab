@@ -10,7 +10,7 @@ Main endpoints
     + >kenneth-uche-shop.herokuapp.com/api/user --> get all users & create user
     + >kenneth-uche-shop.herokuapp.com/api/user/:id --> get user , update user & delete user
     ___
-#   * authentication endpoints
+#   * Authentication endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/register --> register user
  + >kenneth-uche-shop.herokuapp.com/api/auth/login --> login user
  + >kenneth-uche-shop.herokuapp.com/api/auth/update/userdetail --> update user
@@ -20,7 +20,7 @@ Main endpoints
  + >kenneth-uche-shop.herokuapp.com/api/auth/verifyemail --> verify email
   ___
  
- #  * products endpoints
+ #  * Products endpoints
       -data --> 
       - name - type string
       - productImage - type file
@@ -34,12 +34,13 @@ Main endpoints
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId --> get  product , update product & delete product
      + >kenneth-uche-shop.herokuapp.com/api/product/:productId/reviews --> get product reveiw
      ___
- #  * category endpoints
+ #  * Category endpoints
    -data --> 
-     - categoryName - type string
-         + >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
-         + >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
-         ___
+     -categoryName - type string
+     -
+   ->kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
+   ->kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
+      ___
 #   * Order endpoints
    ___
      
