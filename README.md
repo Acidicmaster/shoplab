@@ -36,10 +36,10 @@ Main endpoints
      ___
  #  * Category endpoints
    -data --> 
-     -categoryName - type string
-     -
-   ->kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
-   ->kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
+   + categoryName - type string
+     
+   - >kenneth-uche-shop.herokuapp.com/api/category --> get  all category & create category
+   - >kenneth-uche-shop.herokuapp.com/api/category/:categoryId --> get category & update category & delete 
       ___
 #   * Order endpoints
    ___
