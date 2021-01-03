@@ -35,7 +35,7 @@ const getOrder = asyncHandler(async (req, res, next) => {
 const createOrder = asyncHandler(async (req, res, next) => {
   const newOrder = await Order.create({
     ...req.body,
-    userId: req.user._id,
+   // userId: req.user._id,
   });
 
   res
